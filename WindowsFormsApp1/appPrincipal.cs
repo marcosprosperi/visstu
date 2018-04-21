@@ -105,5 +105,11 @@ namespace WindowsFormsApp1
             formModCo.ShowDialog();
             empresa.modificarCorporacion(formModCo.darCorporacion());
         }
+
+        private void altaAutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            altaAuto altaAuto = new altaAuto();
+            altaAuto.ShowDialog();
+        }
     }
 }

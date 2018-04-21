@@ -16,5 +16,26 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void altaAuto_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ComboUsuario.Text == "Persona")
+            {
+                listBox1.Visible = true;
+                //aca cargo el list
+            } else
+            {
+                if (ComboUsuario.Text == "Corporacion")
+                {
+                    listBox1.Visible = true;
+                    //cargo list de corpo
+                }
+            }
+        }
     }
 }

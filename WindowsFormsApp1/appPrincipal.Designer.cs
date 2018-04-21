@@ -165,6 +165,7 @@
             this.altaAutoToolStripMenuItem.Name = "altaAutoToolStripMenuItem";
             this.altaAutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaAutoToolStripMenuItem.Text = "Alta Auto";
+            this.altaAutoToolStripMenuItem.Click += new System.EventHandler(this.altaAutoToolStripMenuItem_Click);
             // 
             // modificarAutoToolStripMenuItem
             // 
