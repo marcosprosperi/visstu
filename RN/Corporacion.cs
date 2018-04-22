@@ -7,17 +7,15 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace RN
 {
     [Serializable]
-    public class Corporacion
+    public class Corporacion : Entidad
     {
         private string nombre;
         private string cuil;
-        private List<Auto> autos;
 
         public Corporacion(string nombre, string cuil)
         {
             this.nombre = nombre;
             this.cuil = cuil;
-            this.autos = new List<Auto>();
         }
 
         public string Nombre { get => nombre; set => nombre = value; }

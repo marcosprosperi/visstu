@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using RN;
 namespace WindowsFormsApp1
 {
     public partial class altaAuto : Form
     {
-        public altaAuto()
+        private List<Persona> personas;
+        private List<Corporacion> corporaciones;
+        private Auto auto;
+
+        public altaAuto(List<Persona> pers, List<Corporacion> corpos)
         {
             InitializeComponent();
+            personas = pers.ToList();
+            corporaciones = corpos.ToList();
         }
 
         private void altaAuto_Load(object sender, EventArgs e)
@@ -24,18 +30,47 @@ namespace WindowsFormsApp1
 
         private void ComoUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
+            button1.Enabled = true;
             if(ComboUsuario.Text == "Persona")
             {
                 listBox1.Visible = true;
-                //aca cargo el list
+                listBox1.DataSource = null;
+                listBox1.DataSource = personas;
+                
             } else
             {
                 if (ComboUsuario.Text == "Corporacion")
                 {
                     listBox1.Visible = true;
-                    //cargo list de corpo
+                    listBox1.DataSource = null;
+                    listBox1.DataSource = corporaciones;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string dom = inputDominio.Text;
+            string marca = inputMarca.Text;
+            string modelo = inputModelo.Text;
+            int anio = int.Parse(inputAnio.Text);
+            auto = new Auto(dom, modelo, marca, anio);
+            Entidad ent;
+            ent = listBox1.SelectedItem as Entidad;
+            ent.agregarAuto(auto);
+            this.Close();
+
+
+        }
+
+        public Auto darAuto()
+        {
+            return auto;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

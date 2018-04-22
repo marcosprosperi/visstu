@@ -65,7 +65,6 @@ namespace WindowsFormsApp1
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            var asd = this.listBox1.SelectedItem;
             Persona per = listBox1.SelectedItem as Persona;
             string nombre = per.Nombre;
             string apellido = per.Apellido;

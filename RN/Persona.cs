@@ -7,13 +7,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace RN
 {
     [Serializable]
-    public class Persona
+    public class Persona : Entidad
     {
         private string nombre;
         private string apellido;
         private int dni;
         private string telefono;
-        private List<Auto> autos;
         
         public Persona(string nom, string ape, int dni, string tel)
         {
@@ -21,7 +20,6 @@ namespace RN
             this.Apellido = ape;
             this.Dni = dni;
             this.Telefono = tel;
-            this.autos = new List<Auto>();
         }
 
         public string Nombre { get => nombre; set => nombre = value; }

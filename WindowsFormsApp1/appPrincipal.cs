@@ -108,8 +108,9 @@ namespace WindowsFormsApp1
 
         private void altaAutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            altaAuto altaAuto = new altaAuto();
+            altaAuto altaAuto = new altaAuto(empresa.getTodasLasPersonas(), empresa.getCorpos());
             altaAuto.ShowDialog();
+            empresa.agregarAuto(altaAuto.darAuto());
         }
     }
 }

@@ -116,6 +116,11 @@ namespace RN
             corporacion.Cuil = corpo.Cuil;
         }
 
+        public void agregarAuto(Auto auto)
+        {
+            autos.Add(auto);
+        }
+
 
 
 
