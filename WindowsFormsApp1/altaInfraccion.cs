@@ -18,15 +18,18 @@ namespace WindowsFormsApp1
 
         public altaInfraccion(List<TipoInfraccion> listTI, List<Auto> aut)
         {
+            InitializeComponent();
             this.listInfracciones = listTI;
             this.autos = aut;
-            InitializeComponent();
+            this.Height = 140;
+            this.cargarComboBox();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string domBuscar = this.textBox1.Text;
+
+            string domBuscar = this.textBox1.Text;  
             Auto autC = this.autos.Find(x => x.Dominio == domBuscar);
             if(autC != null)
             {
@@ -40,7 +43,6 @@ namespace WindowsFormsApp1
                 this.Height = 140;
                 labelError.Visible = true;
                 labelError.Text = "No se encontro ese dominio";
-
             }
 
         }
@@ -54,5 +56,23 @@ namespace WindowsFormsApp1
         {
             return darInfraccion();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var Fecha = this.dateTimePicker1.Value;
+            var Dominio = textBox1.Text;
+            var TipoInfraccion = comboBox1.SelectedValue as TipoInfraccion;
+            infraccion = new Infraccion(Fecha, Dominio, TipoInfraccion);
+
+        }
+
+        public void cargarComboBox()
+        {
+            foreach (TipoInfraccion infraT in listInfracciones)
+            {
+                comboBox1.Items.Add(infraT.Detalle);
+            }
+        }
+
     }
 }

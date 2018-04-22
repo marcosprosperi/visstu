@@ -30,5 +30,6 @@ namespace RN
         }
 
         public abstract string getTipo();
+
     }
 }

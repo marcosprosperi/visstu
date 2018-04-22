@@ -8,16 +8,19 @@ namespace RN
 {
     public class Infraccion
     {
-        protected DateTime fecha;
-        protected string dominio;
-        protected TipoInfraccion tipoInfraccion;
+        private DateTime fecha;
+        private string dominio;
+        private TipoInfraccion tipoInfraccion;
 
+        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Dominio { get => dominio; set => dominio = value; }
+        public TipoInfraccion TipoInfraccion { get => tipoInfraccion; set => tipoInfraccion = value; }
 
         public Infraccion(DateTime fec, string dom, TipoInfraccion tipI)
         {
-            this.fecha = fec;
-            this.dominio = dom;
-            this.tipoInfraccion = tipI;
+            this.Fecha = fec;
+            this.Dominio = dom;
+            this.TipoInfraccion = tipI;
         }
 
        
