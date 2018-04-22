@@ -18,6 +18,7 @@ namespace RN
         private List<TipoInfraccion> tipoInfracciones;
         private List<Auto> autos;
         private List<Pago> pagos;
+        private List<Infraccion> infracciones;
 
         public Empresa(string emp, int cuil)
         {
@@ -121,7 +122,15 @@ namespace RN
             autos.Add(auto);
         }
 
+        public List<Auto> getAutos()
+        {
+            return this.autos;
+        }
 
+        public void agregarInfracciones(Infraccion inf)
+        {
+            infracciones.Add(inf);
+        }
 
 
 

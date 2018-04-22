@@ -85,14 +85,14 @@
             // agregarToolStripMenuItem1
             // 
             this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
-            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.agregarToolStripMenuItem1.Text = "Agregar";
             this.agregarToolStripMenuItem1.Click += new System.EventHandler(this.agregarToolStripMenuItem1_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -111,20 +111,20 @@
             this.altaPersonaToolStripMenuItem1,
             this.modificarPersonaToolStripMenuItem});
             this.altaPersonaToolStripMenuItem.Name = "altaPersonaToolStripMenuItem";
-            this.altaPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaPersonaToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.altaPersonaToolStripMenuItem.Text = "Persona";
             // 
             // altaPersonaToolStripMenuItem1
             // 
             this.altaPersonaToolStripMenuItem1.Name = "altaPersonaToolStripMenuItem1";
-            this.altaPersonaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.altaPersonaToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.altaPersonaToolStripMenuItem1.Text = "Alta Persona";
             this.altaPersonaToolStripMenuItem1.Click += new System.EventHandler(this.altaPersonaToolStripMenuItem1_Click);
             // 
             // modificarPersonaToolStripMenuItem
             // 
             this.modificarPersonaToolStripMenuItem.Name = "modificarPersonaToolStripMenuItem";
-            this.modificarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarPersonaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.modificarPersonaToolStripMenuItem.Text = "Modificar Persona";
             this.modificarPersonaToolStripMenuItem.Click += new System.EventHandler(this.modificarPersonaToolStripMenuItem_Click);
             // 
@@ -134,20 +134,20 @@
             this.altaEmpresaToolStripMenuItem,
             this.modificarEmpresaToolStripMenuItem});
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.empresaToolStripMenuItem.Text = "Empresa";
             // 
             // altaEmpresaToolStripMenuItem
             // 
             this.altaEmpresaToolStripMenuItem.Name = "altaEmpresaToolStripMenuItem";
-            this.altaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.altaEmpresaToolStripMenuItem.Text = "Alta Empresa";
             this.altaEmpresaToolStripMenuItem.Click += new System.EventHandler(this.altaEmpresaToolStripMenuItem_Click);
             // 
             // modificarEmpresaToolStripMenuItem
             // 
             this.modificarEmpresaToolStripMenuItem.Name = "modificarEmpresaToolStripMenuItem";
-            this.modificarEmpresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarEmpresaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.modificarEmpresaToolStripMenuItem.Text = "Modificar Empresa";
             this.modificarEmpresaToolStripMenuItem.Click += new System.EventHandler(this.modificarEmpresaToolStripMenuItem_Click);
             // 
@@ -163,14 +163,14 @@
             // altaAutoToolStripMenuItem
             // 
             this.altaAutoToolStripMenuItem.Name = "altaAutoToolStripMenuItem";
-            this.altaAutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaAutoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.altaAutoToolStripMenuItem.Text = "Alta Auto";
             this.altaAutoToolStripMenuItem.Click += new System.EventHandler(this.altaAutoToolStripMenuItem_Click);
             // 
             // modificarAutoToolStripMenuItem
             // 
             this.modificarAutoToolStripMenuItem.Name = "modificarAutoToolStripMenuItem";
-            this.modificarAutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarAutoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.modificarAutoToolStripMenuItem.Text = "Modificar Auto";
             // 
             // multasToolStripMenuItem
@@ -186,6 +186,7 @@
             this.altaMultaToolStripMenuItem.Name = "altaMultaToolStripMenuItem";
             this.altaMultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaMultaToolStripMenuItem.Text = "Alta Multa";
+            this.altaMultaToolStripMenuItem.Click += new System.EventHandler(this.altaMultaToolStripMenuItem_Click);
             // 
             // appPrincipal
             // 

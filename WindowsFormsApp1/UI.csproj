@@ -70,6 +70,12 @@
     <Compile Include="altaPersona.Designer.cs">
       <DependentUpon>altaPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="altaInfraccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="altaInfraccion.Designer.cs">
+      <DependentUpon>altaInfraccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="modCorporacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="altaPersona.resx">
       <DependentUpon>altaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="altaInfraccion.resx">
+      <DependentUpon>altaInfraccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modCorporacion.resx">
       <DependentUpon>modCorporacion.cs</DependentUpon>

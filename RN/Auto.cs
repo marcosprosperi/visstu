@@ -12,7 +12,7 @@ namespace RN
         private string dominio;
         private string modelo;
         private string marca;
-        private int año;
+        private int anio;
 
         //agegar set and get
 
@@ -21,12 +21,12 @@ namespace RN
             this.Dominio = dom;
             this.Modelo = mo;
             this.Marca = ma;
-            this.Año = an;
+            this.Anio = an;
         }
 
         public string Dominio { get => dominio; set => dominio = value; }
         public string Modelo { get => modelo; set => modelo = value; }
         public string Marca { get => marca; set => marca = value; }
-        public int Año { get => año; set => año = value; }
+        public int Anio { get => anio; set => anio = value; }
     }
 }

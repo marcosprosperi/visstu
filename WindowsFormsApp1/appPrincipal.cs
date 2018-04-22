@@ -112,5 +112,14 @@ namespace WindowsFormsApp1
             altaAuto.ShowDialog();
             empresa.agregarAuto(altaAuto.darAuto());
         }
+
+        private void altaMultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            altaInfraccion altaInf = new altaInfraccion(empresa.darListadoDeInfracciones(), empresa.getAutos());
+            altaInf.ShowDialog();
+            empresa.agregarInfracciones(altaInf.darInfraccion());
+        }
+
+
     }
 }
