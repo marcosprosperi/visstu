@@ -42,6 +42,7 @@ namespace WindowsFormsApp1
             {
                 this.Height = 140;
                 labelError.Visible = true;
+                button1.Enabled = false;
                 labelError.Text = "No se encontro ese dominio";
             }
 
@@ -74,5 +75,9 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+        }
     }
 }
