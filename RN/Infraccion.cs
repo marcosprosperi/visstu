@@ -11,6 +11,7 @@ namespace RN
         private DateTime fecha;
         private string dominio;
         private TipoInfraccion tipoInfraccion;
+        private bool paga;
 
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Dominio { get => dominio; set => dominio = value; }
@@ -21,8 +22,26 @@ namespace RN
             this.Fecha = fec;
             this.Dominio = dom;
             this.TipoInfraccion = tipI;
+            this.paga = false;
         }
 
-       
+       public bool infraccionPaga()
+        {
+            return this.paga;
+        }
+
+        public bool estaVencida()
+        {
+            TimeSpan diff = (DateTime.Today - this.fecha);
+            if (diff.Days > 30)
+                return true;
+            else
+                return false;
+        }
+
+        public void pagar()
+        {
+            paga = true;
+        }
     }
 }

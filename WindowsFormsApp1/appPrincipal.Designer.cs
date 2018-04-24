@@ -45,6 +45,7 @@
             this.modificarAutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaMultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pagarMiultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,7 +177,8 @@
             // multasToolStripMenuItem
             // 
             this.multasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaMultaToolStripMenuItem});
+            this.altaMultaToolStripMenuItem,
+            this.pagarMiultaToolStripMenuItem});
             this.multasToolStripMenuItem.Name = "multasToolStripMenuItem";
             this.multasToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.multasToolStripMenuItem.Text = "Multas";
@@ -187,6 +189,13 @@
             this.altaMultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaMultaToolStripMenuItem.Text = "Alta Multa";
             this.altaMultaToolStripMenuItem.Click += new System.EventHandler(this.altaMultaToolStripMenuItem_Click);
+            // 
+            // pagarMiultaToolStripMenuItem
+            // 
+            this.pagarMiultaToolStripMenuItem.Name = "pagarMiultaToolStripMenuItem";
+            this.pagarMiultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pagarMiultaToolStripMenuItem.Text = "Pagar Miulta";
+            this.pagarMiultaToolStripMenuItem.Click += new System.EventHandler(this.pagarMiultaToolStripMenuItem_Click);
             // 
             // appPrincipal
             // 
@@ -225,6 +234,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarAutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem multasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaMultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pagarMiultaToolStripMenuItem;
     }
 }
 

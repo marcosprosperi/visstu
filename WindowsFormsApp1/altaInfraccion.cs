@@ -23,6 +23,8 @@ namespace WindowsFormsApp1
             this.autos = aut;
             this.Height = 140;
             this.cargarComboBox();
+            
+
 
         }
 
@@ -55,7 +57,7 @@ namespace WindowsFormsApp1
 
         public Infraccion darInfraccion()
         {
-            return darInfraccion();
+            return infraccion;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,6 +66,7 @@ namespace WindowsFormsApp1
             var Dominio = textBox1.Text;
             var TipoInfraccion = comboBox1.SelectedValue as TipoInfraccion;
             infraccion = new Infraccion(Fecha, Dominio, TipoInfraccion);
+            this.Close();
 
         }
 
@@ -77,7 +80,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            button1.Enabled = true;
+            button2.Enabled = true;
         }
     }
 }

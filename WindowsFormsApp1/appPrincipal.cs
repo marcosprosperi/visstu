@@ -120,6 +120,13 @@ namespace WindowsFormsApp1
             empresa.agregarInfracciones(altaInf.darInfraccion());
         }
 
+        private void pagarMiultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pagoMulta pagoMulta = new pagoMulta(empresa.getMultas());
+            pagoMulta.ShowDialog();
+            empresa.agregarPago(pagoMulta.darPago());
+        }
 
+       
     }
 }

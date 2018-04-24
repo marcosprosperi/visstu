@@ -29,6 +29,7 @@ namespace RN
             this.tipoInfracciones = new List<TipoInfraccion>();
             this.autos = new List<Auto>();
             this.pagos = new List<Pago>();
+            this.infracciones = new List<Infraccion>();
         }
 
 
@@ -132,7 +133,15 @@ namespace RN
             infracciones.Add(inf);
         }
 
+        public List<Infraccion> getMultas()
+        {
+            return infracciones;
+        }
 
+        public void agregarPago(Pago pago)
+        {
+            pagos.Add(pago);
+        }
 
     }
 }

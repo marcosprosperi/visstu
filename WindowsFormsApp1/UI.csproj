@@ -106,6 +106,12 @@
     <Compile Include="modPersona.Designer.cs">
       <DependentUpon>modPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="pagoMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pagoMulta.Designer.cs">
+      <DependentUpon>pagoMulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="altaAuto.resx">
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modPersona.resx">
       <DependentUpon>modPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagoMulta.resx">
+      <DependentUpon>pagoMulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
