@@ -18,7 +18,7 @@ namespace CapaDatos
             try
             {
                 BinaryFormatter bf = new BinaryFormatter();
-                FileStream miArchivo = new FileStream("Curso.dat", FileMode.Create);
+                FileStream miArchivo = new FileStream("C:\\asd\\Empresa.dat", FileMode.Create);
                 bf.Serialize(miArchivo, o);
                 miArchivo.Close();
                 ok = true;
@@ -35,7 +35,7 @@ namespace CapaDatos
             try
             {
                 BinaryFormatter bf = new BinaryFormatter();
-                FileStream miArchivo = new FileStream("Curso.dat", FileMode.Open);
+                FileStream miArchivo = new FileStream("C:\\asd\\Empresa.dat", FileMode.Open);
                 object o = bf.Deserialize(miArchivo);
                 miArchivo.Close();
                 return o;

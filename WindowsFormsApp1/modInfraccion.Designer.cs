@@ -154,6 +154,7 @@ namespace WindowsFormsApp1
             // 
             this.inputCod.Location = new System.Drawing.Point(59, 17);
             this.inputCod.Name = "inputCod";
+            this.inputCod.ReadOnly = true;
             this.inputCod.Size = new System.Drawing.Size(252, 20);
             this.inputCod.TabIndex = 15;
             // 

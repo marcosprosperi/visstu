@@ -17,10 +17,11 @@ namespace WindowsFormsApp1
 
         public appPrincipal()
         {
-            empresa = new Empresa("empresa", 123);
+            empresa = Empresa.Recuperar();
+            
             InitializeComponent();
 
-            
+
         }
 
 
@@ -84,8 +85,10 @@ namespace WindowsFormsApp1
 
         private void modificarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             modPersona formModPe = new modPersona(empresa.getTodasLasPersonas());
             formModPe.ShowDialog();
+            if (formModPe.darPersona() != null)
             empresa.modificarPersona(formModPe.darPersona());
         }
 
@@ -103,6 +106,7 @@ namespace WindowsFormsApp1
         {
             modCorporacion formModCo = new modCorporacion(empresa.getCorpos());
             formModCo.ShowDialog();
+            if (formModCo.darCorporacion() != null)
             empresa.modificarCorporacion(formModCo.darCorporacion());
         }
 
@@ -127,6 +131,18 @@ namespace WindowsFormsApp1
             empresa.agregarPago(pagoMulta.darPago());
         }
 
-       
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            if (empresa.guardar())
+                MessageBox.Show("GUARDADO OK");
+            else
+                MessageBox.Show("ERROR AL GAURDAR");
+
+            this.Close();
+        }
+
+        private void modificarAutoToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        }
     }
 }

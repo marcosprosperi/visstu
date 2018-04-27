@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RN
 {
+    [Serializable]
     public abstract class Entidad
     {
         protected List<Auto> autos;

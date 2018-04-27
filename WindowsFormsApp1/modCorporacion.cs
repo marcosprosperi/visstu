@@ -57,5 +57,9 @@ namespace WindowsFormsApp1
         {
             return corporacion;
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

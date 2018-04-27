@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using CapaDatos;
 
 namespace RN
 {
@@ -30,6 +30,7 @@ namespace RN
             this.autos = new List<Auto>();
             this.pagos = new List<Pago>();
             this.infracciones = new List<Infraccion>();
+
         }
 
 
@@ -109,6 +110,7 @@ namespace RN
             persona.Telefono = pe.Telefono;
             persona.Apellido = pe.Apellido;
 
+
         }
 
         public void modificarCorporacion(Corporacion corpo)
@@ -141,6 +143,21 @@ namespace RN
         public void agregarPago(Pago pago)
         {
             pagos.Add(pago);
+        }
+
+
+        public bool guardar()
+        {
+            return Datos.Guardar(this);
+        }
+
+
+        public static Empresa Recuperar()
+        {
+            Empresa c = (Empresa)Datos.Recuperar();
+            if (c == null)
+                c = new Empresa("Empresa Curro", 303143396);
+            return c;
         }
 
     }

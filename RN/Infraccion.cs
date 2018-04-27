@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RN
 {
+    [Serializable]
     public class Infraccion
     {
         private DateTime fecha;
@@ -13,15 +14,16 @@ namespace RN
         private TipoInfraccion tipoInfraccion;
         private bool paga;
 
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+       /* public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Dominio { get => dominio; set => dominio = value; }
-        public TipoInfraccion TipoInfraccion { get => tipoInfraccion; set => tipoInfraccion = value; }
 
+        public TipoInfraccion TipoInfraccion { get => tipoInfraccion; set => tipoInfraccion = value; }
+        */
         public Infraccion(DateTime fec, string dom, TipoInfraccion tipI)
         {
-            this.Fecha = fec;
-            this.Dominio = dom;
-            this.TipoInfraccion = tipI;
+            this.fecha = fec;
+            this.dominio = dom;
+            this.tipoInfraccion = tipI;
             this.paga = false;
         }
 
@@ -42,6 +44,11 @@ namespace RN
         public void pagar()
         {
             paga = true;
+        }
+
+        public override string ToString()
+        {
+            return fecha + " " + dominio + " " + tipoInfraccion.Detalle;
         }
     }
 }

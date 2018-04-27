@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,23 +41,12 @@
             this.modificarEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaAutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarAutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaMultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagarMiultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(246, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MENU";
             // 
             // menuStrip1
             // 
@@ -69,7 +57,7 @@
             this.multasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(611, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(453, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -155,8 +143,7 @@
             // autosToolStripMenuItem
             // 
             this.autosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaAutoToolStripMenuItem,
-            this.modificarAutoToolStripMenuItem});
+            this.altaAutoToolStripMenuItem});
             this.autosToolStripMenuItem.Name = "autosToolStripMenuItem";
             this.autosToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.autosToolStripMenuItem.Text = "Autos";
@@ -167,12 +154,6 @@
             this.altaAutoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.altaAutoToolStripMenuItem.Text = "Alta Auto";
             this.altaAutoToolStripMenuItem.Click += new System.EventHandler(this.altaAutoToolStripMenuItem_Click);
-            // 
-            // modificarAutoToolStripMenuItem
-            // 
-            this.modificarAutoToolStripMenuItem.Name = "modificarAutoToolStripMenuItem";
-            this.modificarAutoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.modificarAutoToolStripMenuItem.Text = "Modificar Auto";
             // 
             // multasToolStripMenuItem
             // 
@@ -186,23 +167,33 @@
             // altaMultaToolStripMenuItem
             // 
             this.altaMultaToolStripMenuItem.Name = "altaMultaToolStripMenuItem";
-            this.altaMultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaMultaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.altaMultaToolStripMenuItem.Text = "Alta Multa";
             this.altaMultaToolStripMenuItem.Click += new System.EventHandler(this.altaMultaToolStripMenuItem_Click);
             // 
             // pagarMiultaToolStripMenuItem
             // 
             this.pagarMiultaToolStripMenuItem.Name = "pagarMiultaToolStripMenuItem";
-            this.pagarMiultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pagarMiultaToolStripMenuItem.Text = "Pagar Miulta";
+            this.pagarMiultaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pagarMiultaToolStripMenuItem.Text = "Pagar Multa";
             this.pagarMiultaToolStripMenuItem.Click += new System.EventHandler(this.pagarMiultaToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(369, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 46);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // appPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 528);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(453, 179);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "appPrincipal";
@@ -217,7 +208,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem1;
@@ -231,10 +221,10 @@
         private System.Windows.Forms.ToolStripMenuItem modificarEmpresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaAutoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarAutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem multasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaMultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagarMiultaToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

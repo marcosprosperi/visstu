@@ -44,7 +44,6 @@ namespace WindowsFormsApp1
             {
                 this.Height = 140;
                 labelError.Visible = true;
-                button1.Enabled = false;
                 labelError.Text = "No se encontro ese dominio";
             }
 
@@ -64,7 +63,7 @@ namespace WindowsFormsApp1
         {
             var Fecha = this.dateTimePicker1.Value;
             var Dominio = textBox1.Text;
-            var TipoInfraccion = comboBox1.SelectedValue as TipoInfraccion;
+            var TipoInfraccion = (TipoInfraccion)comboBox1.SelectedItem;
             infraccion = new Infraccion(Fecha, Dominio, TipoInfraccion);
             this.Close();
 
@@ -74,13 +73,17 @@ namespace WindowsFormsApp1
         {
             foreach (TipoInfraccion infraT in listInfracciones)
             {
-                comboBox1.Items.Add(infraT.Detalle);
+                comboBox1.Items.Add(infraT);
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             button2.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

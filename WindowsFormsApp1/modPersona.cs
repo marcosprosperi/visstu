@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
                 InitializeComponent();
                 personas = ListP.ToList();
                 listBox1.DataSource = personas;
+                
             }
             else
             {
@@ -75,6 +76,11 @@ namespace WindowsFormsApp1
             inputApellido.Text = apellido.ToString();
             InputDni.Text = dni.ToString();
             inputTelefono.Text = telefono.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+           
+            this.Close();
         }
     }
 }
