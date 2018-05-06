@@ -135,9 +135,15 @@ namespace RN
             infracciones.Add(inf);
         }
 
-        public List<Infraccion> getMultas()
+        public List<Infraccion> getMultasNoPagas()
         {
-            return infracciones;
+            List<Infraccion> infraNoPagas = new List<Infraccion>();
+            foreach (Infraccion inf in infracciones)
+            {
+                if (!inf.infraccionPaga())
+                    infraNoPagas.Add(inf);
+            }
+            return infraNoPagas;
         }
 
         public void agregarPago(Pago pago)

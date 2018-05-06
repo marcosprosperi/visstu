@@ -18,28 +18,39 @@ namespace WindowsFormsApp1
 
         public pagoMulta(List<Infraccion> infra)
         {
-            this.infracciones = infra;
             InitializeComponent();
+            this.infracciones = infra;
             listBox1.DataSource = null;
-            foreach (Infraccion infrac in infracciones)
-            {
-                if (!infrac.infraccionPaga() && !infrac.estaVencida())
-                    listBox1.Items.Add(infra.ToString());
-            }
+            listBox1.DataSource = infra;
+            
 
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            Infraccion selectedItem = listBox1.SelectedItem as Infraccion;
+            if(selectedItem.estaVencida())
+            {
+                MessageBox.Show("Esta vencida no se puede abonar!");
+                button1.Enabled = false;
+            } else
+            {
+                button1.Enabled = true;
+            }
             
+          
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime fechaHoy = DateTime.Today;
-            Infraccion infraSele =listBox1.SelectedItem as Infraccion;
+            Infraccion infraSele = listBox1.SelectedItem as Infraccion;
             Pago pago = new Pago(fechaHoy, infraSele);
             infraSele.pagar();
+            this.Close();
             
         }
 

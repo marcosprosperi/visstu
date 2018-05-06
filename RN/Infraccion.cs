@@ -46,9 +46,21 @@ namespace RN
             paga = true;
         }
 
+        public string darDetalle()
+        {
+            if (this.estaVencida())
+                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " VENCIDA!";
+            else
+                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " EN FECHA DE PAGO!";
+        }
+
         public override string ToString()
         {
-            return fecha + " " + dominio + " " + tipoInfraccion.Detalle;
+            if (this.estaVencida())
+                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " VENCIDA!";
+            else
+                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " EN FECHA DE PAGO!";
         }
+
     }
 }

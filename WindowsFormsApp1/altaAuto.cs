@@ -81,5 +81,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

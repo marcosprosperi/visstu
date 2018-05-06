@@ -19,5 +19,11 @@ namespace RN
         {
             return "grave";
         }
+
+        public override string ToString()
+        {
+            return codigo + " - " + detalle + " - " + importe;
+        }
+
     }
 }

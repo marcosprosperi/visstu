@@ -18,5 +18,11 @@ namespace RN
         {
             return "leve";
         }
+
+        public override string ToString()
+        {
+            return codigo + " - " + detalle + " - " + importe;
+        }
+
     }
 }

@@ -137,6 +137,7 @@
             this.listBox1.Size = new System.Drawing.Size(199, 199);
             this.listBox1.TabIndex = 10;
             this.listBox1.Visible = false;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button1
             // 

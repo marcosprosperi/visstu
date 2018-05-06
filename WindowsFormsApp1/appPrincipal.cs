@@ -148,9 +148,9 @@ namespace WindowsFormsApp1
 
         private void pagarMiultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (empresa.getMultas().Count != 0)
+            if (empresa.getMultasNoPagas().Count != 0)
             {
-                pagoMulta pagoMulta = new pagoMulta(empresa.getMultas());
+                pagoMulta pagoMulta = new pagoMulta(empresa.getMultasNoPagas());
                 pagoMulta.ShowDialog();
                 empresa.agregarPago(pagoMulta.darPago());
             } else
