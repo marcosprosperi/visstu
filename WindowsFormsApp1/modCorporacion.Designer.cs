@@ -62,6 +62,7 @@
             // 
             this.InputCuil.Location = new System.Drawing.Point(77, 341);
             this.InputCuil.Name = "InputCuil";
+            this.InputCuil.ReadOnly = true;
             this.InputCuil.Size = new System.Drawing.Size(130, 20);
             this.InputCuil.TabIndex = 26;
             // 

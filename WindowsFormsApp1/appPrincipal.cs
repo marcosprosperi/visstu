@@ -47,19 +47,29 @@ namespace WindowsFormsApp1
 
         private void agregarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
+
+            
             formTipoInfraccion formTI = new formTipoInfraccion();
             formTI.ShowDialog();
-            if (!empresa.yaExisteInfraccion(formTI.darInfraccion()))
+            
+            
+            if(formTI.darInfraccion() != null)
                 empresa.agregarTipoInfraccion(formTI.darInfraccion());
-            else
-                MessageBox.Show("Ya existe una infraccion");
+            
+
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            modInfraccion formModTI = new modInfraccion(empresa.darListadoDeInfracciones());
-            formModTI.ShowDialog();
-            empresa.modificarInfraccion(formModTI.darInfraccion());
+            if(empresa.darListadoDeInfracciones().Count != 0) { 
+                modInfraccion formModTI = new modInfraccion(empresa.darListadoDeInfracciones());
+                formModTI.ShowDialog();
+                empresa.modificarInfraccion(formModTI.darInfraccion());
+            } else
+            {
+                MessageBox.Show("No hay tipo de infracciones cargadas");
+            }
 
         }
 
@@ -77,58 +87,76 @@ namespace WindowsFormsApp1
         {
             altaPersona formAP = new altaPersona();
             formAP.ShowDialog();
-            if (!empresa.yaExistePersona(formAP.darPersona()))
+            if (formAP.darPersona() != null)
                 empresa.agregarPersona(formAP.darPersona());
-            else
-                MessageBox.Show("Ya existe una infraccion");
+        
         }
 
         private void modificarPersonaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            modPersona formModPe = new modPersona(empresa.getTodasLasPersonas());
-            formModPe.ShowDialog();
-            if (formModPe.darPersona() != null)
-            empresa.modificarPersona(formModPe.darPersona());
+            if (empresa.getTodasLasPersonas().Count != 0)
+            {
+                modPersona formModPe = new modPersona(empresa.getTodasLasPersonas());
+                formModPe.ShowDialog();
+                if (formModPe.darPersona() != null)
+                    empresa.modificarPersona(formModPe.darPersona());
+            } else
+            {
+                MessageBox.Show("No hay personas cargadas");
+            }
         }
 
         private void altaEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             altaCorporacion altaCorpo = new altaCorporacion();
             altaCorpo.ShowDialog();
-            if (!empresa.yaExisteCorpo(altaCorpo.darCorporacion()))
+            if (altaCorpo.darCorporacion() != null)
                 empresa.agregarCorporacion(altaCorpo.darCorporacion());
-            else
-                MessageBox.Show("Ya existe una ...");
+            
         }
 
         private void modificarEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            modCorporacion formModCo = new modCorporacion(empresa.getCorpos());
-            formModCo.ShowDialog();
-            if (formModCo.darCorporacion() != null)
-            empresa.modificarCorporacion(formModCo.darCorporacion());
+            if (empresa.getCorpos().Count != 0)
+            {
+                modCorporacion formModCo = new modCorporacion(empresa.getCorpos());
+                formModCo.ShowDialog();
+                if (formModCo.darCorporacion() != null)
+                    empresa.modificarCorporacion(formModCo.darCorporacion());
+            } else
+            {
+                MessageBox.Show("No hay corpos cargadas!");
+            }
         }
 
         private void altaAutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             altaAuto altaAuto = new altaAuto(empresa.getTodasLasPersonas(), empresa.getCorpos());
             altaAuto.ShowDialog();
-            empresa.agregarAuto(altaAuto.darAuto());
+            if (altaAuto.darAuto() != null)
+                empresa.agregarAuto(altaAuto.darAuto());
         }
 
         private void altaMultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             altaInfraccion altaInf = new altaInfraccion(empresa.darListadoDeInfracciones(), empresa.getAutos());
             altaInf.ShowDialog();
-            empresa.agregarInfracciones(altaInf.darInfraccion());
+            if(altaInf.darInfraccion() != null)
+                empresa.agregarInfracciones(altaInf.darInfraccion());
         }
 
         private void pagarMiultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pagoMulta pagoMulta = new pagoMulta(empresa.getMultas());
-            pagoMulta.ShowDialog();
-            empresa.agregarPago(pagoMulta.darPago());
+            if (empresa.getMultas().Count != 0)
+            {
+                pagoMulta pagoMulta = new pagoMulta(empresa.getMultas());
+                pagoMulta.ShowDialog();
+                empresa.agregarPago(pagoMulta.darPago());
+            } else
+            {
+                MessageBox.Show("No hay empresa cargadas");
+            }
         }
 
         private void button1_Click_2(object sender, EventArgs e)

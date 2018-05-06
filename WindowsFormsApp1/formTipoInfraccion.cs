@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrWhiteSpace(inputCod.Text) && !string.IsNullOrWhiteSpace(InputDetalle.Text) && !string.IsNullOrWhiteSpace(InputImporte.Text))
             {
                 int cod = int.Parse(inputCod.Text);
                 string detalle = InputDetalle.Text;
@@ -59,10 +59,9 @@ namespace WindowsFormsApp1
                     tipoInfraccion = new InfraccionLeve(cod, detalle, impo);
 
                 this.Close();
-            }
-            catch (Exception ex)
+            } else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Debe cargar todos los campos");
             }
         }
 

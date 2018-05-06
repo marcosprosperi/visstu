@@ -27,16 +27,15 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+
+            if (!string.IsNullOrWhiteSpace(inputNombre.Text) && !string.IsNullOrWhiteSpace(InputCuil.Text))
             {
                 string nom = inputNombre.Text;
                 string cuil = InputCuil.Text;
                 corporacion = new Corporacion(nom, cuil);
                 this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+            } else {
+                MessageBox.Show("Se deben completar todos los campos!!");
             }
 
         }

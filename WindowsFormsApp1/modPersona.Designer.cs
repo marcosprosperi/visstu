@@ -82,6 +82,7 @@
             // 
             this.InputDni.Location = new System.Drawing.Point(66, 393);
             this.InputDni.Name = "InputDni";
+            this.InputDni.ReadOnly = true;
             this.InputDni.Size = new System.Drawing.Size(130, 20);
             this.InputDni.TabIndex = 17;
             // 

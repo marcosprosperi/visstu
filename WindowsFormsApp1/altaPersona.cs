@@ -22,17 +22,16 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try { 
+            if (!string.IsNullOrWhiteSpace(inputNombre.Text) && !string.IsNullOrWhiteSpace(inputApellido.Text) && !string.IsNullOrWhiteSpace(InputDni.Text) && !string.IsNullOrWhiteSpace(inputTelefono.Text))
+            {
                 string nom = inputNombre.Text;
                 string ape = inputApellido.Text;
                 int dni = int.Parse(InputDni.Text);
                 string telefono = inputTelefono.Text;
                 persona = new Persona(nom, ape, dni, telefono);
                 this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+            } else {
+                MessageBox.Show("Debe completar todos los campos para continuar!");
             }
 
         }

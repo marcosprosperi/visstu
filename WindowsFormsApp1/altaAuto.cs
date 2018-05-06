@@ -50,15 +50,24 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string dom = inputDominio.Text;
-            string marca = inputMarca.Text;
-            string modelo = inputModelo.Text;
-            int anio = int.Parse(inputAnio.Text);
-            auto = new Auto(dom, modelo, marca, anio);
-            Entidad ent;
-            ent = listBox1.SelectedItem as Entidad;
-            ent.agregarAuto(auto);
-            this.Close();
+            if(!string.IsNullOrWhiteSpace(inputDominio.Text) && !string.IsNullOrWhiteSpace(inputMarca.Text) && !string.IsNullOrWhiteSpace(inputModelo.Text) && !string.IsNullOrWhiteSpace(inputAnio.Text))
+            {
+                string dom = inputDominio.Text;
+                string marca = inputMarca.Text;
+                string modelo = inputModelo.Text;
+                int anio = int.Parse(inputAnio.Text);
+                auto = new Auto(dom, modelo, marca, anio);
+                Entidad ent;
+                ent = listBox1.SelectedItem as Entidad;
+                ent.agregarAuto(auto);
+                this.Close();
+            } else
+            {
+                MessageBox.Show("Debe cargar todo los campos");
+            }
+            
+            
+           
 
 
         }

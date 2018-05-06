@@ -88,12 +88,6 @@
     <Compile Include="modInfraccion.Designer.cs">
       <DependentUpon>modInfraccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAgregarAuto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formAgregarAuto.Designer.cs">
-      <DependentUpon>formAgregarAuto.cs</DependentUpon>
-    </Compile>
     <Compile Include="formTipoInfraccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modInfraccion.resx">
       <DependentUpon>modInfraccion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formAgregarAuto.resx">
-      <DependentUpon>formAgregarAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formTipoInfraccion.resx">
       <DependentUpon>formTipoInfraccion.cs</DependentUpon>
