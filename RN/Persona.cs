@@ -31,5 +31,10 @@ namespace RN
         {
             return nombre + " " + apellido + " - " + telefono + " - " + dni;
         }
+
+        public override string getTipo()
+        {
+            return "Persona";
+        }
     }
 }

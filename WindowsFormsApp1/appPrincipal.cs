@@ -172,5 +172,13 @@ namespace WindowsFormsApp1
         private void modificarAutoToolStripMenuItem_Click(object sender, EventArgs e) {
 
         }
+
+        private void listadoDeVencidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informe informe = new Informe(empresa.getTodasLasPersonas(), empresa.getCorpos(), empresa.getMultasNoPagas());
+            informe.ShowDialog();
+           // if (altaAuto.darAuto() != null)
+             //   empresa.agregarAuto(altaAuto.darAuto());
+        }
     }
 }

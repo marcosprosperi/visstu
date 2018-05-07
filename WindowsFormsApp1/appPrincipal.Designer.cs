@@ -45,6 +45,7 @@
             this.altaMultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagarMiultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.listadoDeVencidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +152,7 @@
             // altaAutoToolStripMenuItem
             // 
             this.altaAutoToolStripMenuItem.Name = "altaAutoToolStripMenuItem";
-            this.altaAutoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.altaAutoToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.altaAutoToolStripMenuItem.Text = "Alta Auto";
             this.altaAutoToolStripMenuItem.Click += new System.EventHandler(this.altaAutoToolStripMenuItem_Click);
             // 
@@ -159,7 +160,8 @@
             // 
             this.multasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaMultaToolStripMenuItem,
-            this.pagarMiultaToolStripMenuItem});
+            this.pagarMiultaToolStripMenuItem,
+            this.listadoDeVencidasToolStripMenuItem});
             this.multasToolStripMenuItem.Name = "multasToolStripMenuItem";
             this.multasToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.multasToolStripMenuItem.Text = "Multas";
@@ -167,14 +169,14 @@
             // altaMultaToolStripMenuItem
             // 
             this.altaMultaToolStripMenuItem.Name = "altaMultaToolStripMenuItem";
-            this.altaMultaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.altaMultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaMultaToolStripMenuItem.Text = "Alta Multa";
             this.altaMultaToolStripMenuItem.Click += new System.EventHandler(this.altaMultaToolStripMenuItem_Click);
             // 
             // pagarMiultaToolStripMenuItem
             // 
             this.pagarMiultaToolStripMenuItem.Name = "pagarMiultaToolStripMenuItem";
-            this.pagarMiultaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pagarMiultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pagarMiultaToolStripMenuItem.Text = "Pagar Multa";
             this.pagarMiultaToolStripMenuItem.Click += new System.EventHandler(this.pagarMiultaToolStripMenuItem_Click);
             // 
@@ -187,6 +189,13 @@
             this.button1.Text = "Cerrar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // listadoDeVencidasToolStripMenuItem
+            // 
+            this.listadoDeVencidasToolStripMenuItem.Name = "listadoDeVencidasToolStripMenuItem";
+            this.listadoDeVencidasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listadoDeVencidasToolStripMenuItem.Text = "Listado de Vencidas";
+            this.listadoDeVencidasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeVencidasToolStripMenuItem_Click);
             // 
             // appPrincipal
             // 
@@ -225,6 +234,7 @@
         private System.Windows.Forms.ToolStripMenuItem altaMultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagarMiultaToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeVencidasToolStripMenuItem;
     }
 }
 

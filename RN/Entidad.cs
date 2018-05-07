@@ -22,5 +22,13 @@ namespace RN
         }
 
 
+        public abstract string getTipo();
+
+
+        public List<Auto> getAutos()
+        {
+            return this.autos;
+        }
+
     }
 }

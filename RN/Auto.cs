@@ -28,5 +28,11 @@ namespace RN
         public string Modelo { get => modelo; set => modelo = value; }
         public string Marca { get => marca; set => marca = value; }
         public int Anio { get => anio; set => anio = value; }
+
+
+        public override string ToString()
+        {
+            return "Patente: " + dominio;
+        }
     }
 }

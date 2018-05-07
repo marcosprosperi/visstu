@@ -146,6 +146,7 @@ namespace RN
             return infraNoPagas;
         }
 
+
         public void agregarPago(Pago pago)
         {
             pagos.Add(pago);

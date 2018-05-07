@@ -26,5 +26,10 @@ namespace RN
         {
             return nombre + " " + cuil;
         }
+
+        public override string getTipo()
+        {
+            return "Corporacion";
+        }
     }
 }

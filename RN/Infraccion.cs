@@ -14,27 +14,32 @@ namespace RN
         private TipoInfraccion tipoInfraccion;
         private bool paga;
 
-       /* public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Dominio { get => dominio; set => dominio = value; }
-
+        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public bool Paga { get => paga; set => paga = value; }
         public TipoInfraccion TipoInfraccion { get => tipoInfraccion; set => tipoInfraccion = value; }
-        */
+
+        /* public DateTime Fecha { get => fecha; set => fecha = value; }
+         public string Dominio { get => dominio; set => dominio = value; }
+
+         public TipoInfraccion TipoInfraccion { get => tipoInfraccion; set => tipoInfraccion = value; }
+         */
         public Infraccion(DateTime fec, string dom, TipoInfraccion tipI)
         {
-            this.fecha = fec;
-            this.dominio = dom;
-            this.tipoInfraccion = tipI;
-            this.paga = false;
+            this.Fecha = fec;
+            this.Dominio = dom;
+            this.TipoInfraccion = tipI;
+            this.Paga = false;
         }
 
        public bool infraccionPaga()
         {
-            return this.paga;
+            return this.Paga;
         }
 
         public bool estaVencida()
         {
-            TimeSpan diff = (DateTime.Today - this.fecha);
+            TimeSpan diff = (DateTime.Today - this.Fecha);
             if (diff.Days > 30)
                 return true;
             else
@@ -43,24 +48,26 @@ namespace RN
 
         public void pagar()
         {
-            paga = true;
+            Paga = true;
         }
 
         public string darDetalle()
         {
             if (this.estaVencida())
-                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " VENCIDA!";
+                return this.Fecha.ToString() + "//" + this.Dominio + "//" + this.TipoInfraccion.ToString() + " VENCIDA!";
             else
-                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " EN FECHA DE PAGO!";
+                return this.Fecha.ToString() + "//" + this.Dominio + "//" + this.TipoInfraccion.ToString() + " EN FECHA DE PAGO!";
         }
 
         public override string ToString()
         {
             if (this.estaVencida())
-                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " VENCIDA!";
+                return this.Fecha.ToString() + "//" + this.Dominio + "//" + this.TipoInfraccion.ToString() + " VENCIDA!";
             else
-                return this.fecha.ToString() + "//" + this.dominio + "//" + this.tipoInfraccion.ToString() + " EN FECHA DE PAGO!";
+                return this.Fecha.ToString() + "//" + this.Dominio + "//" + this.TipoInfraccion.ToString() + " EN FECHA DE PAGO!";
         }
+
+        
 
     }
 }

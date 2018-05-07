@@ -76,6 +76,12 @@
     <Compile Include="altaInfraccion.Designer.cs">
       <DependentUpon>altaInfraccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informe.Designer.cs">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </Compile>
     <Compile Include="modCorporacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="altaInfraccion.resx">
       <DependentUpon>altaInfraccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informe.resx">
+      <DependentUpon>Informe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modCorporacion.resx">
       <DependentUpon>modCorporacion.cs</DependentUpon>
