@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
 
             string domBuscar = this.textBox1.Text;  
-            Auto autC = this.autos.Find(x => x.Dominio == domBuscar);
+            Auto autC = this.autos.Find(x => x.Dominio.ToUpper() == domBuscar.ToUpper());
             if(autC != null)
             {
                 labelError.Visible = false;

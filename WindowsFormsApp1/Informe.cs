@@ -35,7 +35,8 @@ namespace WindowsFormsApp1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox2.DataSource = null;
-            if(comboBox1.SelectedItem == "Personas")
+            this.Width = 341;
+            if (comboBox1.SelectedItem == "Personas")
                 comboBox2.DataSource = this.personas;
             else
                 comboBox2.DataSource = this.corporaciones;
@@ -43,6 +44,7 @@ namespace WindowsFormsApp1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.Width = 341;
             comboBox3.DataSource = null;
             Entidad selectedItem2 = comboBox2.SelectedItem as Entidad;
             if(selectedItem2 != null)
@@ -56,7 +58,8 @@ namespace WindowsFormsApp1
             Auto selectedItem3 = comboBox3.SelectedItem as Auto;
             Infraccion infraSelected = listBox1.SelectedItem as Infraccion;
             Entidad selectedItem2 = comboBox2.SelectedItem as Entidad;
-            if(selectedItem3 != null && infraSelected != null && selectedItem2 != null) { 
+            if(selectedItem3 != null && infraSelected != null && selectedItem2 != null) {
+                this.Width = 668;
                 label25.Text = DateTime.Today.ToShortDateString();
                 label22.Text = infraSelected.Dominio;
                 label17.Text = infraSelected.TipoInfraccion.Codigo.ToString();
@@ -96,7 +99,9 @@ namespace WindowsFormsApp1
         {
             listBox1.DataSource = null;
             Auto selectedItem3 = comboBox3.SelectedItem as Auto;
-            if(selectedItem3 != null) { 
+            this.Width = 341;
+            if (selectedItem3 != null) {
+                
                 List<Infraccion> infracionDelAuto = new List<Infraccion>();
                 foreach (Infraccion infr in infracciones)
                 {
