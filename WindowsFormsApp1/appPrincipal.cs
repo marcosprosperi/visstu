@@ -14,11 +14,14 @@ namespace WindowsFormsApp1
     public partial class appPrincipal : Form
     {
         private Empresa empresa;
-
+        
         public appPrincipal()
         {
-            empresa = Empresa.Recuperar();
-            
+            empresa = new Empresa("ESTa empresa", 231223123);
+            if (empresa.recuperarAutos())
+                MessageBox.Show("AUTOS RECUPERADOS");
+
+
             InitializeComponent();
 
 

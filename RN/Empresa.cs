@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using CapaDatos;
+using System.Collections;
 
 namespace RN
 {
@@ -19,6 +20,7 @@ namespace RN
         private List<Auto> autos;
         private List<Pago> pagos;
         private List<Infraccion> infracciones;
+
 
         public Empresa(string emp, int cuil)
         {
@@ -153,18 +155,28 @@ namespace RN
         }
 
 
-        public bool guardar()
-        {
-            return Datos.Guardar(this);
-        }
 
 
-        public static Empresa Recuperar()
+        public bool recuperarAutos()
         {
-            Empresa c = (Empresa)Datos.Recuperar();
-            if (c == null)
-                c = new Empresa("Empresa Curro", 303143396);
-            return c;
+            Auto a;
+            List<ArrayList> autosAux = new List<ArrayList>();
+            if (Datos.recuperarAutos(autosAux))
+            {
+                foreach (ArrayList auto in autosAux)
+                {
+                    //int dni=int.Parse(per[1].ToString());
+                    //string nombre=per[2].ToString();
+                    //DateTime fNac=DateTime.Parse(per[3].ToString());
+                    //string parenLugar=per[4].ToString();
+                    //if(int.Parse(per[5].ToString())==1)
+                    a.armar(auto);
+                    this.autos.Add(a);
+                }
+                return true;
+            }
+            else
+                return false;
         }
 
     }

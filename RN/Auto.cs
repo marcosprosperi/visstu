@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections;
+
 namespace RN
 {
     [Serializable]
@@ -33,6 +35,14 @@ namespace RN
         public override string ToString()
         {
             return "Patente: " + dominio;
+        }
+
+        public virtual void armar(ArrayList datos)
+        {
+            this.dominio = datos[1].ToString();
+            this.modelo = datos[2].ToString();
+            //this.marca = 
+            //this.anio = DateTime.Parse(datos[3].ToString());
         }
     }
 }
